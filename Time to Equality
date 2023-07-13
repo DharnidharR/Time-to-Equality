@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int totaltime = 0,i,n,maxnum=0;
+    printf("Size of Array : ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter %d Array Elements : ",n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(maxnum<a[i])
+        maxnum=a[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        totaltime+=maxnum-a[i];
+    }
+    printf("Time to equality : %d",totaltime);
+}
